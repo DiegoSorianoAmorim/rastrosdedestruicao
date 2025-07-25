@@ -36,9 +36,13 @@ async function loadEventData() {
             addEventMarker(feature);
         });
         
-        // Ajustar a visualização para mostrar todos os marcadores
+        // Ajustar a visualização para mostrar todos os marcadores, se houver
         if (markersLayer.getLayers().length > 0) {
             map.fitBounds(markersLayer.getBounds(), { padding: [20, 20] });
+        } else {
+            // Se não houver marcadores, centralizar em Tracunhaém
+            map.setView(TRACUNHAEM_CENTER, INITIAL_ZOOM);
+            console.log("Nenhum marcador encontrado. Mantendo visualização centrada em Tracunhaém.");
         }
     } catch (error) {
         console.error('Erro ao carregar dados dos eventos:', error);
@@ -184,10 +188,11 @@ function closeInfoPanel() {
 
 // Resetar visualização do mapa
 function resetMapView() {
-    if (markersLayer.getLayers().length > 0) {
+    if (markersLayer && markersLayer.getLayers().length > 0) {
         map.fitBounds(markersLayer.getBounds(), { padding: [20, 20] });
     } else {
         map.setView(TRACUNHAEM_CENTER, INITIAL_ZOOM);
+        console.log("Nenhum marcador encontrado para ajustar. Centralizando em Tracunhaém.");
     }
 }
 
