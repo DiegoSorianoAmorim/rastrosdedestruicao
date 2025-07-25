@@ -12,7 +12,7 @@
         "tipo": "instalacao",
         "data": "2024-03-15",
         "local": "Tracunhaém, PE - Centro da cidade",
-        "descricao": "Instalação de nova torre de transmissão de energia elétrica de 138kV no centro de Tracunhaém. A obra faz parte do projeto de modernização da rede elétrica da região da Zona da Mata Norte de Pernambuco, visando melhorar a qualidade e confiabilidade do fornecimento de energia para a população local e empresas da região.",
+        "descricao": "Instalação de nova torre de transmissão de energia elétrica de 138kV no centro de Tracunhaém. ",
         "responsavel": "Companhia Energética de Pernambuco - CELPE",
         "status": "Concluída",
         "observacoes": "Obra realizada com acompanhamento da comunidade local e órgãos ambientais. Projeto executado sem interrupção significativa no fornecimento de energia."
@@ -22,11 +22,11 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-35.2350, -7.7980]
+        "coordinates": [-35.1249, -7.7761]
       },
       "properties": {
-        "titulo": "Manutenção Preventiva - Distrito Industrial",
-        "tipo": "manutencao",
+        "titulo": "Choque ao andar de bicicleta",
+        "tipo": "Coque elétrico",
         "data": "2024-02-20",
         "local": "Tracunhaém, PE - Distrito Industrial",
         "descricao": "Manutenção preventiva em torre existente de 69kV para garantir a segurança e continuidade da transmissão de energia para o distrito industrial de Tracunhaém. Os trabalhos incluem inspeção de estruturas metálicas, substituição de isoladores danificados e limpeza de vegetação próxima às linhas de transmissão.",
