@@ -63,7 +63,7 @@
         "tipo": "aprovacao",
         "data": "2024-04-05",
         "local": "Tracunhaém, PE - Bairro Novo Horizonte",
-        "descricao": "Aprovação da licença ambiental para instalação de nova linha de transmissão de 138kV conectando Tracunhaém aos municípios vizinhos. O projeto visa atender o crescimento da demanda energética na região e melhorar a confiabilidade do sistema elétrico local. A licença foi concedida após análise detalhada dos impactos ambientais e sociais.",
+        "descricao": "Aprovação da licença ambiental para instalação de nova linha de transmissão de 138kV conectando Tracunhaém aos municípios vizinhos. O projeto não teve participação popular",
         "responsavel": "CPRH - Agência Estadual de Meio Ambiente",
         "status": "Aprovada",
         "observacoes": "Licença aprovada com condicionantes ambientais específicas, incluindo programa de monitoramento da fauna e flora local."
@@ -76,11 +76,11 @@
         "coordinates": [-35.2380, -7.7950]
       },
       "properties": {
-        "titulo": "Modernização de Subestação - Zona Norte",
-        "tipo": "instalacao",
+        "titulo": "Crime ambiental",
+        "tipo": "Danos ao meio ambiente",
         "data": "2024-05-12",
         "local": "Tracunhaém, PE - Zona Norte",
-        "descricao": "Projeto de modernização e ampliação da subestação de energia elétrica de 69/13,8kV para atender o crescimento da demanda energética na zona norte de Tracunhaém. O projeto inclui instalação de novos transformadores, sistemas de proteção digital e automação da subestação para melhorar a eficiência operacional.",
+        "descricao": "Foi constatada erosão epós a instalação das torres",
         "responsavel": "Chesf - Companhia Hidro Elétrica do São Francisco",
         "status": "Em planejamento",
         "observacoes": "Projeto em fase de estudos de viabilidade técnica e ambiental. Previsão de início das obras para segundo semestre de 2024."
