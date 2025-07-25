@@ -19,7 +19,7 @@ function initMap() {
     }).addTo(map);
 
     // Criar grupo de marcadores
-    markersLayer = L.layerGroup().addTo(map);
+    markersLayer = L.featureGroup().addTo(map);
 
     // Carregar dados dos eventos
     loadEventData();
@@ -37,8 +37,15 @@ async function loadEventData() {
         });
         
         // Ajustar a visualização para mostrar todos os marcadores, se houver
-        if (markersLayer.getLayers().length > 0) {
-            map.fitBounds(markersLayer.getBounds(), { padding: [20, 20] });
+        if (markersLayer && markersLayer.getLayers().length > 0) {
+            // Somente chame getBounds se houver camadas no markersLayer
+            try {
+                map.fitBounds(markersLayer.getBounds(), { padding: [20, 20] });
+            } catch (e) {
+                console.error("Erro ao ajustar o mapa para os marcadores:", e);
+                map.setView(TRACUNHAEM_CENTER, INITIAL_ZOOM);
+                console.log("Erro ao ajustar o mapa. Mantendo visualização centrada em Tracunhaém.");
+            }
         } else {
             // Se não houver marcadores, centralizar em Tracunhaém
             map.setView(TRACUNHAEM_CENTER, INITIAL_ZOOM);
@@ -189,7 +196,13 @@ function closeInfoPanel() {
 // Resetar visualização do mapa
 function resetMapView() {
     if (markersLayer && markersLayer.getLayers().length > 0) {
-        map.fitBounds(markersLayer.getBounds(), { padding: [20, 20] });
+        try {
+            map.fitBounds(markersLayer.getBounds(), { padding: [20, 20] });
+        } catch (e) {
+            console.error("Erro ao ajustar o mapa para os marcadores na função resetMapView:", e);
+            map.setView(TRACUNHAEM_CENTER, INITIAL_ZOOM);
+            console.log("Erro ao ajustar o mapa. Centralizando em Tracunhaém.");
+        }
     } else {
         map.setView(TRACUNHAEM_CENTER, INITIAL_ZOOM);
         console.log("Nenhum marcador encontrado para ajustar. Centralizando em Tracunhaém.");
