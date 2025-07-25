@@ -142,13 +142,6 @@ function showEventInfo(properties) {
         <div class="event-description">
             ${properties.descricao || 'Sem descrição disponível'}
         </div>
-        <div class="event-metadata">
-            ${properties.data ? `<div class="metadata-item"><strong>Data:</strong> ${formatDate(properties.data)}</div>` : ''}
-            ${properties.local ? `<div class="metadata-item"><strong>Local:</strong> ${properties.local}</div>` : ''}
-            ${properties.responsavel ? `<div class="metadata-item"><strong>Responsável:</strong> ${properties.responsavel}</div>` : ''}
-            ${properties.status ? `<div class="metadata-item"><strong>Status:</strong> ${properties.status}</div>` : ''}
-            ${properties.observacoes ? `<div class="metadata-item"><strong>Observações:</strong> ${properties.observacoes}</div>` : ''}
-        </div>
     `;
     
     infoDetails.innerHTML = detailsHTML;
